@@ -1,0 +1,28 @@
+spring.application.name=volunteer-management-system
+
+# Logging
+logging.level.org.springframework=INFO
+logging.level.com.alok.volunteermanagementsystem=DEBUG
+
+# Server
+server.port=8080
+
+# JWT Configuration
+jwt.secret=${JWT_SECRET:your-256-bit-secret-key-for-jwt-token-generation}
+jwt.expiration=604800000
+
+# MongoDB Configuration
+spring.data.mongodb.uri=${MONGODB_URI:mongodb://localhost:27017/volunteerdb}
+
+# Email Configuration (Brevo/SendinBlue)
+spring.mail.host=${MAIL_HOST:smtp-relay.brevo.com}
+spring.mail.port=${MAIL_PORT:2525}
+spring.mail.username=${MAIL_USERNAME:your-email@example.com}
+spring.mail.password=${MAIL_PASSWORD:your-password}
+spring.mail.protocol=smtp
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# App Email Settings
+app.mail.from=${MAIL_FROM:noreply@volunteerapp.com}
+app.mail.from-name=Volunteer Management System
